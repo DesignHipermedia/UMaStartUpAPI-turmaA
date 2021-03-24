@@ -1,0 +1,80 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.6)),url("./imagens/littlePlant.jpeg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.padding-cover {
+    padding-top: 7rem;
+}
+
+.rachelCarson {
+    margin-right: -65rem;
+    line-height: 10%;
+    font-size: 23px;
+    color: white;
+    font-family: 'Cedarville Cursive', cursive;
+    animation: texto 2s;
+}
+
+.botaoEsquecer {
+    line-height: 10%;
+}
+
+.botaoEsquecer:hover {
+    color: darkblue;
+}
+
+.estiloLetra {
+    font-weight: 800;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    position: relative;
+    animation: titulo 2s;
+}
+
+.estiloLetra2{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    animation: texto 2s;
+}
+
+  @keyframes titulo {
+  
+    0% {
+      left: 100px;
+      opacity: 0;
+    }
+  
+    100% {
+      left: 0px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes texto {
+  
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+#inputPassword4:target {
+    color: green;
+}
+
+
+@media only screen and (min-width: 374px) and (max-width: 1025px) {
+  .rachelCarson {
+    margin-right: 1rem;
+
+  }
+    
+} 
+

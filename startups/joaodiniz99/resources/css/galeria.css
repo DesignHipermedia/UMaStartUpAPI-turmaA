@@ -1,0 +1,84 @@
+body {
+  background-color: rgb(80, 135, 160);
+}
+
+.container-fluid h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.container-fluid #tituloCao {
+  border-bottom: 5px solid rgb(115, 193, 230);
+}
+
+#nomeCao {
+  padding: 8px;
+  border-radius: 20px;
+  border: 2px solid black;
+  transition: color 0.2s, border 0.2s;
+}
+
+#nomeCao:focus {
+  outline: none;
+  color: #17a2b8;
+  border: 2px solid #17a2b8;
+}
+
+#btnCao {
+  padding: 10px;
+  border-radius: 55%;
+}
+
+#btnCao span {
+  font-size: 1rem;
+}
+
+.imagesDiv {
+  margin: 1rem 0;
+}
+
+.imagesDiv > img {
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #17a2b8;
+
+  transition: all .2s; /* Animation */
+}
+
+.imagesDiv:hover img{
+  transform: scale(.9);
+}
+
+/* Botão Top */
+#btnTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 1.5rem;
+  background-color: #138496;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+
+  transition: all 0.2s;
+  animation: btnTop 1s;
+}
+
+#btnTop:hover {
+  background-color: white;
+  color: #138496;
+}
+
+@keyframes btnTop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

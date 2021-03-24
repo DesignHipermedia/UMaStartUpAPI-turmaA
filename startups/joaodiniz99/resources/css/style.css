@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+}
+
+.navbar-brand {
+  color: #4d7682 !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.nav-link {
+  color: #476e79 !important;
+  font-family: 'Roboto', sans-serif;
+  border: 1px solid #476e79;
+  border-radius: 20px;
+  padding: 4px 16px !important;
+  transition: color 0.2s, border 0.2s, background-color 0.2s;
+}
+
+.nav-link:hover {
+  border: 1px solid #1c97b9 !important;
+  color: white !important;
+  background-color: #1c97b9;
+}
+
+.active {
+  border: 1px solid #1c97b9 !important;
+  color: white !important;
+  background-color: #1c97b9;
+}

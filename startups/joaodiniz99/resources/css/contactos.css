@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(80, 135, 160);
+}
+
+.container-fluid h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.container-fluid #tituloCao {
+  border-bottom: 5px solid rgb(115, 193, 230);
+}
+
+/* Form */
+form {
+  font-family: 'Poppins', sans-serif !important;
+  color: white;
+
+  /* animação */
+  animation: formulario 2s;
+}
+
+@keyframes formulario {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animações */
+.floating {   
+  animation: float 5s ease-in-out infinite;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 55px; 
+} 
+
+.floating2 {
+  animation: float2 5s ease-in-out infinite;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 55px; 
+}
+
+@keyframes floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 15px); } 
+    100%   { transform: translate(0, -0px); }     
+} 
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+  }
+
+  50% {
+    transform: translateY(10rem);
+    -webkit-transform: translateY(10rem);
+  }
+
+  100% {
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+ .floating,
+ .floating2 {
+   display: none;
+ }
+}

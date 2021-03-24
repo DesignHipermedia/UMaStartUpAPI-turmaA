@@ -1,0 +1,168 @@
+html{
+    background-color: #262626;
+}
+.text{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.top-container{
+    background-color: tomato;
+    color: white;
+    height: 6vw;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+}
+    .top-container-text-left{
+        float: left;
+        font-family: 'Roboto', sans-serif;
+        color:white;
+        font-weight: bold;
+        font-size: 1.5vw;
+        margin-left: 20px;
+        margin-top: 2vw;
+    }
+    .top-container-text-right{
+        float: right;
+        font-family: 'Roboto', sans-serif;
+        color:white;
+        font-weight: bold;
+        font-size: 1vw;
+        margin-right: 20px;
+        margin-top: 2.5vw;
+    }
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    float: left;
+    color: white;
+}
+.container1{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    height: 10vw;
+    width: 98%;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 2vw;
+}
+.logo{
+    float: left;
+    margin-left: 20px;
+    margin-top: 1vw;
+    width: 4%;
+}
+.game-box{
+    float:left;
+    height: 8vw;
+    max-height: 10vw;
+    width: 18vw;
+    margin-left: 4vw;
+    margin-top: 5vw;
+    }
+    .game-image{
+        max-width: 18vw;
+        max-height: 8vw;
+        width: 18vw;
+        height: 8vw;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        float: left;
+        position: absolute;
+    }
+    .game-top{
+        max-width: 18vw;
+        max-height: 8vw;
+        width: 18vw;
+        height: 8vw;
+        background-color: whitesmoke;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        float: left;
+    }
+    .game-info{
+        background-color: tomato;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        height: 2.5vw;
+        text-align: center;
+        width: 18vw;
+        float: left;
+        border: none;
+        color: white;
+    }
+.wrapper {
+    position: relative;
+    min-width: 100px;
+
+    margin-left: 5vw;
+}
+.search-icon {
+    top: 6px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+}
+.search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 1.5vw;
+    width: 40%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: rgb(51, 51, 51);
+    margin-left: 30vw;
+    color: white;
+}
+
+/* style para o collapse na pagina "search" */
+
+.collapsible {
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+
+    width: 4vw;
+    border: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(196, 58, 34);
+  }
+  .content {
+    padding: 0 18px;
+    display: none;
+    transition: ease-out;
+    overflow: hidden;
+  }
+.wishlist-text{
+    float:left;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1vw;
+}
+.game-image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+.game-image:hover{
+    opacity: 50%;
+}
+.game-image:hover::before{
+    content: "comprar";
+}

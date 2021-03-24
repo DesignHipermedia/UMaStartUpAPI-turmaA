@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Police Crimes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="notiflix-aio-2.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Oswald', sans-serif;
+        overflow: hidden;
+      }
+
+      .hero-image{
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("police_wallpaper.jpg");
+          height: 100vh;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+      }
+
+      .nav-link{
+          margin: 0 10px;
+          font-size: 1.6em;
+          color: black !important;
+          transition: padding-bottom 2s;
+      }
+
+      .nav-link:hover{
+          padding-bottom: 5px !important;
+      }
+
+      .navbar-nav{
+          position: relative;
+          animation: leftcoming 1s;
+      }
+
+      @keyframes leftcoming {
+          0%{
+              right: 700px;
+              opacity: 0;
+          }
+          50%{
+              opacity: 0;
+          }
+          100%{
+              right: 0;
+              opacity: 1;
+          }
+      }
+
+      .active{
+          border-bottom: solid 2px black;
+      }
+
+      .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      }
+
+      #marker {
+        background-image: url('./logo.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .container h1 {
+        padding-top: 2%;
+        color: black;
+        font-size: 3rem;
+      }
+
+      .fadeIn{
+          position: relative;
+          animation: fade 3s;
+      }
+
+      @keyframes fade {
+          0%{
+              opacity: 0;
+          }
+          100%{
+              opacity: 1;
+          }
+      }
+
+      @media only screen and (max-width: 990px){
+          body{
+              overflow: scroll;
+          }
+
+          .hero-text{
+              position: relative;
+          }
+          
+          .active{
+              border-bottom: 0 ;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <div class="container-fluid">
+          <a class="navbar-brand" href="homepage.html">
+              <img src="logo.png" alt="Police UK" width="70" height="70">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+                  <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="homepage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Neighbourhoods</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contactos.html">Contactos</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+    <div class="hero-image">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center mb-2">
+            <h1 class="fadeIn" style="color: white;">NEIGHBOURHOODS</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <div class="input-group mb-3">
+              <input id="nomeCidade" type="text" class="form-control" placeholder="Insira o nome da cidade">
+              <button class="btn btn-sm btn-primary" type="button" id="btnSearch">Pesquisar</button>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="content">
+          <div class="col text-center">
+            <div id='map' style='width: 1100px; height: 600px; margin-top: 2%; border: solid 2px white; background-color: rgba(255, 255, 255, 0.356);'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script>
+      const entrada = document.getElementById("nomeCidade"); // input
+      const btnSearch = document.getElementById("btnSearch"); // botao
+      
+      const mostrarInfo =  async (nome) => {
+        let urlNeigh = 'https://data.police.uk/api/leicestershire/neighbourhoods';
+        try {
+          const response = await fetch(urlNeigh);
+          // console.log(response);
+          if(response.ok) {
+            const responseJson = await response.json();
+            console.log(responseJson);
+            const idNome = responseJson.filter( ({ name }) => name == nome);
+            console.log(idNome[0].id);
+
+            const idMutante = idNome[0].id;
+            let url = `https://data.police.uk/api/leicestershire/${idMutante}`;
+            Notiflix.Loading.Pulse("A carregar...");
+            try {
+              const response = await fetch(url);
+              // console.log(response);
+              if (response.ok) {
+                // const responseJson = await response.json();
+                const responseJson = await response.json();
+                console.log(responseJson);
+
+                const { latitude, longitude } = responseJson.centre;
+                const { description } = responseJson;
+                const { address, name } = responseJson.locations[0];
+                const place = [ longitude, latitude ];
+
+                console.log(`Latitude: ${latitude}\nLongitude: ${longitude}`);
+                mapboxgl.accessToken = 'pk.eyJ1Ijoiam9hb2Rpbml6OTkiLCJhIjoiY2tnY2Y3OGNyMDYwZTJ4cXhqcDMxOW44ayJ9.e4SY6vgKV6hwSBlUR3SjnA';
+                var map = new mapboxgl.Map({
+                  container: 'map',
+                  style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
+                  center: place, // starting position [lng, lat]
+                  zoom: 14 // starting zoom
+                });
+
+                // create the popup
+                var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+                  `<strong>${name}</strong><p>${description ? description : 'Não tem descrição...'}</p><p><strong>Morada:</strong> ${address}</p>`
+                );
+
+                // create DOM element for the marker
+                var el = document.createElement('div');
+                el.id = 'marker';
+
+                new mapboxgl.Marker(el)
+                  .setLngLat(place)
+                  .setPopup(popup) // sets a popup on this marker
+                  .addTo(map);
+                Notiflix.Loading.Remove();
+              }
+            } catch (error) {
+              alert("Erro no sitio, consola!");
+              console.log(error);
+              Notiflix.Loading.Remove();
+            }
+          }
+        } catch (error) {
+          alert("Esse nome não existe!");
+          console.log(error);
+          Notiflix.Loading.Remove();
+        }
+      }
+ 
+      btnSearch.addEventListener("click", () => {
+        nome = entrada.value;
+        if (nome != "") {
+          mostrarInfo(nome);
+        } else {
+          alert("O nome não pode estar vazio");
+        }
+      });
+    </script>
+  </body>
+</html>

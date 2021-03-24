@@ -1,0 +1,18 @@
+.cards1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i.pinimg.com/originals/6b/16/5c/6b165ca9760b6b29045b27b0f816b464.png");
+    background-size: cover;
+}
+
+
+/* .cards1 .box {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+} */

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Contactos</title>
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg corNavbar sticky-top">
+        <a class="navbar-brand" href="./index.html"><img src="./imagens/Earth_symbol.svg" alt="Earth Alchemical Symbol"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="./imagens/toggler.svg" class= "togglerFlor" alt="toggler">
+          
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link corLinks" href="#">Pesquisar por categorias<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link corLinks" href="./pag3_API_DH.html">Contactos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+  
+            <form class="form-inline tamanhoBarra2">
+              <input class="form-control mr-1" type="search" placeholder="Pesquisar.." aria-label="Search">
+              <button class="btn btn-success bordasBotao" type="submit"><i class="fas fa-leaf"></i></button>
+            </form>
+    
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle distancias" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color: black;">
+                  <i class="fas fa-user-circle fa-2x pl-3 avatar"></i> 
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Definições</a>
+                  <a class="dropdown-item" href="./pag4_API_DH.html">Ver favoritos</a>
+                  <a class="dropdown-item" href="#">Ver histórico</a>
+                  <a class="dropdown-item" href="#">Sair</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      </nav>  
+    <img src="./imagens/tree2.svg" class= "d-flex arvore" alt="árvore">
+    <div class= "container-fluid">
+        <button type="button" class="btn btn-outline-success btn-light btn-lg posicoes1" data-toggle="modal" data-target="#exampleModal">Fale connosco!</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-weight-bold" id="exampleModalLabel">Nova mensagem de email:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Remetente:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Destinatário:</label>
+                    <input type="text" class="form-control" id="recipient-name" value= "john_doe@placeholder.com" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Mensagem:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success">Enviar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <button type="button" class="btn btn-success btn-lg posicoes2" data-toggle="modal" data-target="#exampleModal1">Contactos</button>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Entre em contacto!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <h5>E-mail:</h5><p>john_doe@placeholder.com</p>
+                    <h5>Telemóvel:</h5><p>926 102 xxx</p>
+                    <h5>Fax:</h5><p>+351 253 xxx xxx</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success btn-outline-light btn-lg posicoes3" data-toggle="modal" data-target="#exampleModalLong">Sobre nós</button>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Acerca de Nós</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, officiis magni? Illum error eaque dicta itaque nobis iusto sunt ut molestiae vitae sequi voluptatem sapiente iste, ratione sit earum. Necessitatibus!
+                Optio praesentium porro illum nisi blanditiis aperiam officiis. Dolore quidem laboriosam aspernatur amet impedit quod numquam ex inventore? Rem nulla vitae asperiores eveniet autem porro, quo provident ducimus cumque obcaecati.
+                Deserunt culpa aperiam blanditiis eius laborum delectus animi impedit saepe, explicabo architecto modi perspiciatis iusto maxime quo tenetur quaerat. Voluptate dolorem aliquam voluptas laboriosam deleniti eaque sapiente veritatis, maxime non!
+                Minima repudiandae in voluptate aliquid repellendus temporibus quo, voluptatum soluta vero dolores veniam officiis ipsam cupiditate consequatur, laboriosam ex ratione quas illum quidem obcaecati itaque corporis natus? Eaque, sit. Minus!
+                Eligendi optio quo, architecto exercitationem, ipsam esse facere fugit aut amet nisi sequi? Explicabo libero alias dolorem facere dignissimos cum fugiat adipisci natus velit! Labore, mollitia. Voluptatum exercitationem ipsa recusandae.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

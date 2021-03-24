@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="geral2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Pesquisar!</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg corNavbar sticky-top">
+      <a class="navbar-brand" href="./index.html"><img src="./imagens/Earth_symbol.svg" alt="Earth Alchemical Symbol"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="./imagens/toggler.svg" class= "togglerFlor" alt="toggler">
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link corLinks" href="#">Pesquisar por categorias<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link corLinks" href="./pag3_API_DH.html">Contactos</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+
+          <form class="form-inline tamanhoBarra2">
+            <input class="form-control mr-1" type="search" placeholder="Pesquisar.." aria-label="Search">
+            <button class="btn btn-success bordasBotao" type="submit"><i class="fas fa-leaf"></i></button>
+          </form>
+  
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle distancias" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color: black;">
+                <i class="fas fa-user-circle fa-2x pl-3 avatar"></i> 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Definições</a>
+                <a class="dropdown-item" href="./pag4_API_DH.html">Ver favoritos</a>
+                <a class="dropdown-item" href="#">Ver histórico</a>
+                <a class="dropdown-item" href="#">Sair</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      </div>
+    </div>
+    </nav>
+    <div class= "d-flex justify-content-center align-items-center baseDados">
+        <div class="d-block">
+          <img src="./imagens/borboletaRosa.svg" class= "borboleta pl-2" alt="Borboleta">
+            <h1>Base de Dados</h1>
+            <h3>Começe a pesquisar!</h3>
+            <form class="d-flex pt-4 bordasBotao">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar.." aria-label="Pesquisar">
+                <button class="btn btn-outline-success ml-1 bordasBotao" type="submit"><i class="fas fa-leaf"></i></button>
+            </form>
+            <a href="#" class="text-success tamanhoLetra">Pesquisar por categorias</a>
+        </div>
+    </div>
+    <div class="cards">
+      <div class="row m-4 w-75">
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor9_creepingButtercup_RanunculusRepens.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="text-left">Nome comum: ...</p>
+                <p class="text-left">País de origem: ...</p>
+                <p class="text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a> 
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor10_sycamoreMaple_AcerPseudoplatanus.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="d-flex flex-wrap card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor3_oneseedHawthorn_CrataegusMonogyna.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2 ">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor8_orchardgrass_DactylisGlomerata.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2 ">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor5_sweetVernalgrass_AnthoxanthumOdoratum.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor4_europeanAsh_FraxinusExcelsior.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor6_gardenSorrel_RumexAcetosa.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor1_redFescue_FestucaRubra.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Informações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>Reino:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Filo:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Classe:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ordem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Família:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Género:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Espécie:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Nome comum:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>País de origem:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+                <h5>Ano de descoberta:</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. unde maiores at</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-2">
+          <div class="card cartoes">
+            <img class="card-img-top cartao1" src="./imagens/flor2_redClover_TrifoliumPratense.jpg" alt="Card image cap">
+            <div class="overlay">
+              <div class="text">
+                <i class="fab fa-pagelines fa-2x folhinha"></i>
+                <h5 class="card-title mt-5">Informações gerais:</h5>
+                <p class="card-text text-left">Nome comum: ...</p>
+                <p class="card-text text-left">País de origem: ...</p>
+                <p class="card-text text-left">Ano em que foi descoberta: ...</p>
+                <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target= "#staticBackdrop">Mais informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<script>
+ $(document).ready(function(){
+        $(".folhinha").click(function(){
+            if($(".folhinha").hasClass("liked")){
+                $(".folhinha").css("color", "white");
+                $(".folhinha").removeClass("liked");
+            }else{
+                $(".folhinha").css("color", "green");
+                $(".folhinha").addClass("liked");
+            }
+        });
+    });
+</script>  
+</body>
+
+</html>

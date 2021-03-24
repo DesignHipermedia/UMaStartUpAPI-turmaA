@@ -1,0 +1,181 @@
+.nav-item{
+   
+    margin-right: 10px;
+   
+    height: 50px;  
+  
+     
+}
+.nav-item:hover{
+    background-color: crimson;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;  
+    box-shadow: 2px 2px 5px white;
+}
+.cor-principal{
+    color:crimson;
+}
+h1{
+    font-weight: 900;
+    height: 36px;
+    margin: 0;
+    line-height: 0.8;
+}
+
+.container{
+    background-color: black;
+   padding: 10px;
+   box-shadow: 5px 5px 5px aqua;
+}
+body{
+    background-image: url("/imagem/bd.jpg");
+    margin: 0;
+}
+footer  .col-lg-12{
+    background-color: rgb(121, 8, 8);
+    padding: 80px;
+      
+ }
+ .social-media{
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;  
+     
+ }
+ footer{
+    color:white;
+     
+ }
+ .social-media a:hover{
+    color:  white;
+ }
+ .ligacao{
+     font-size: 25px;
+     color: white;
+ }
+ .ligacao a:hover{
+     color: aqua;
+ } 
+ .fundo {
+       border: 5px outset transparent;
+       background-color: white; 
+       width: 20%;
+       font:  arial;
+}
+.norte{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+}
+.botaopesquisa{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.topicos{
+    margin-top: 100px;
+}
+.navbar-toggler{
+    background-color: white;
+
+}
+.cards1{
+    position: relative;
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-family: consolas;
+}
+.cards1 .box {
+    position: relative;
+    width: 505px;
+    height: 650px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.cards1 .box .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    clip-path: circle(650px at center 100px);
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+.cards1 .box:hover .imgbx{
+    clip-path: circle(80px at center 100px);
+    transition-delay: 0s;
+}
+.cards1 .box .content{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 65%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.cards1 .box .content h2{
+    margin: 0;
+    padding: 0;
+}
+.cards1 .box .content a{
+    text-decoration: none;
+    background:  #000000;
+    color: #ffffff;
+    padding: 10px;
+    display: inline-block;
+}
+.cards1 .box .imgbx img{
+    position: absolute;
+    top:  0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cards1 .box .content h2,
+.cards1 .box .content p,
+.cards1 .box .content a{
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(20px);
+}
+.cards1 .box:hover .content h2{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+.cards1 .box:hover .content p{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+.cards1 .box:hover .content a{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+}
+@media only screen and (max-width: 800px){
+    .container,.cards1{
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+     
+
+    
+}

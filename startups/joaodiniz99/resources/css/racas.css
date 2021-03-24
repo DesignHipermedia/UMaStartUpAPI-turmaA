@@ -1,0 +1,113 @@
+body {
+  background-color: rgb(80, 135, 160);
+}
+
+.container-fluid h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.container-fluid #tituloRacas {
+  border-bottom: 5px solid rgb(115, 193, 230);
+}
+
+#content {
+  height: 50vh;
+}
+
+.card__breed {
+  color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.555);
+  border-radius: 5px;
+
+  /* cursor: pointer; */
+
+  transition: 0.2s;
+  animation: racas 2s;
+}
+
+.card__breed img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+
+  filter: grayscale(100%);
+  transition: 0.2s;
+}
+
+.card__container {
+  padding: 8px 16px;
+  text-align: center;
+
+  transition: 0.2s;
+}
+
+.card__breed:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.400);
+}
+
+.card__breed:hover img{
+  filter: grayscale(0%);
+}
+
+.card__breed:hover .card__container {
+  background-color: rgb(68, 116, 138);
+}
+
+@keyframes racas {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal */
+#dogModalTitle {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+#dogModalDivImg {
+  text-align: center; 
+}
+
+#dogModalImg {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.555);
+}
+
+/* Botão Top */
+#btnTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 1.5rem;
+  background-color: #138496;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+
+  transition: all 0.2s;
+  animation: btnTop 1s;
+}
+
+#btnTop:hover {
+  background-color: white;
+  color: #138496;
+}
+
+@keyframes btnTop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

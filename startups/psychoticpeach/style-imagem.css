@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;500&display=swap');
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.imagem {
+    margin: 5% 0% 0% 10%;
+    width: 85%;
+    margin: 3% 0 0 5%;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+    // cursor: zoom-in;
+    // cursor: zoom-out;
+    // cursor: grab;
+}
+
+.background {
+    background-image: linear-gradient(to right, rgb(29, 29, 29), rgb(19, 19, 19) 50%, rgb(29, 29, 29));
+    background-size: 100%;
+    background-position: 50% 100%;
+    background-repeat: repeat;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 11% 9% 10% 10% 5% 5% 10% 10% 10% 10% 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.container-2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/12;
+    box-shadow: 5px 5px 15px rgb(19, 19, 19);
+}
+
+.container-3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 4/12;
+}
+
+.container-4 {
+    width: 100%;
+    background-color: rgb(23, 23, 23);
+    grid-column: 1/-1;
+    box-shadow: 5px 5px 15px rgb(19, 19, 19);
+}
+
+.container-imagem {
+    grid-column: 2/12;
+    grid-row: 2/12;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+// .container-fav {
+//     display: flex;
+//     flex-direction: row-reverse;
+//     justify-content: flex-start;
+//     justify-items: center;
+//     width: 70%;
+//     height: 50%;
+// }
+.header {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/2;
+    margin-left: 3%;
+    background: inherit;
+    background-color: rgb(23, 23, 23);
+}
+
+h1 {
+    font-size: 200%;
+    font-weight: 400;
+    font-family: 'Red Rose', cursive;
+    color: rgba(240, 240, 240, 0.500);
+    animation: flicker 1.5s infinite alternate;
+}
+
+h1::-moz-selection {
+    color: var(--neon-text-color);
+}
+
+h1::selection {
+    color: var(--neon-text-color);
+}
+
+h1:focus {
+    outline: none;
+}
+
+@keyframes flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: -0.2rem -0.2rem 20px rgb(110, 110, 110), 0 0 5px var(--neon-text-color), 0 0 8px var(--neon-text-color), 0 0 10px var(--neon-text-color), 0 0 15px var(--neon-text-color);
+        box-shadow: 0 0 2px #fff, inset 0 0 2px #fff, 0 0 4px var(--neon-border-color), inset 0 0 4px var(--neon-border-color), 0 0 4px var(--neon-border-color), inset 0 0 4px var(--neon-border-color);
+    }
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+.btn2 {
+    text-shadow: -1px -1px 5px rgba(10, 116, 255, 0.664), 1px -1px 5px rgba(10, 116, 255, 0.664), -1px 1px 5px rgba(10, 116, 255, 0.664), 1px 1px 5px rgba(10, 116, 255, 0.664);
+}
+
+.btn {
+    text-shadow: -1px -1px 5px rgba(111, 0, 255, 0.521), 1px -1px 5px rgba(111, 0, 255, 0.521), -1px 1px 5px rgba(111, 0, 255, 0.521), 1px 1px 5px rgba(111, 0, 255, 0.521);
+}
+
+.btn1 {
+    text-shadow: -1px -1px 5px rgba(255, 103, 255, 0.712), 1px -1px 5px rgba(255, 103, 255, 0.712), -1px 1px 5px rgba(255, 103, 255, 0.712), 1px 1px 5px rgba(255, 103, 255, 0.712);
+}
+
+.button-header {
+    display: block;
+    padding: 20px 30px;
+    outline: none;
+    color: rgba(240, 240, 240, 0.500);
+    background: inherit;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 150%;
+    font-family: 'Red Rose', cursive;
+    margin: 1% 3% 1% 0;
+    cursor: pointer;
+}
+
+.button-header::before,
+.button-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    background-color: #fff;
+    height: 100%;
+    opacity: .2;
+    transform: rotate(45deg);
+    transition: all ease .8s;
+    color: rgb(177, 177, 177)
+}
+
+.button-header::after {
+    transition-delay: 0.2s;
+}
+
+.button-header:hover::before,
+.button-header:hover::after {
+    left: 100%;
+}
+
+.button-header:active {
+    transform: translateY(2px);
+}
+
+.button-logo {
+    position: absolute;
+    display: flex;
+    outline: none;
+    background: inherit;
+    border: none;
+    margin: 1% 0% 0% 0%;
+}
+
+.row {
+    text-align: center;
+    margin: 15% 0% 0% 15%;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.row-2 {
+    margin-top: 20%;
+    margin-left: 15%;
+    width: 100%;
+}
+
+.row-3 {
+    margin-left: 15%;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.row-4 {
+    margin-left: 15%;
+    display: flex;
+    justify-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 6;
+}
+
+:root {
+    --neon-text-color: rgba(255, 81, 0, 0.521);
+}
+
+h4 {
+    font-size: 200%;
+    margin: 0;
+}
+
+h3 {
+    font-size: 150%;
+    color: rgba(240, 240, 240, 0.500);
+    font-family: 'Red Rose', cursive;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 100%;
+    color: rgba(240, 240, 240, 0.500);
+    font-family: 'Red Rose', cursive;
+}
+
+// .fav {
+//     font-size: 100%;
+// }
+h4 {
+    font-weight: 100;
+    font-family: 'Red Rose', cursive;
+    font-size: 100%;
+    color: rgba(240, 240, 240, 0.500);
+    ;
+}
+
+// .like {
+//     margin-left: 2%;
+// }
+.button {
+    text-decoration: none;
+    margin: 1% 3% 1% 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(36, 36, 36, 0.507);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked~label>img {
+    transform: scale(1.5);
+    cursor: zoom-out;
+}
+
+.like-btn {
+    margin-right: 15%;
+    position: absolute;
+    background-color: inherit;
+    width: 6%;
+    height: 50%;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: 2;
+}
+
+// .lable2 {
+//     margin-left: 50%;
+// }
+.fa-heart {
+    margin-left: 1%;
+    box-sizing: border-box;
+    position: absolute;
+    -webkit-text-stroke: 2px rgba(110, 110, 110, 0.795);
+    color: rgba(110, 110, 110, 0.116);
+    transition: all ease-in-out;
+}
+
+.like-btn:checked+.fa-heart {
+    color: red;
+    -webkit-text-stroke: 1px red;
+    animation: .5s linear burst;
+}
+
+@keyframes burst {
+    0%,
+    10% {
+        transform: scale(1);
+        opacity: .5;
+        color: lavender;
+    }
+    45% {
+        transform: scale(.2) rotate(30deg);
+        opacity: .75;
+    }
+    50% {
+        transform: scale(1.5) rotate(-37.5deg);
+        opacity: 1;
+        color: red;
+        text-shadow: 2px 2px 6px rgba(235, 9, 9, 0.5);
+    }
+    90%,
+    95% {
+        transform: scale(1) rotate(10deg);
+        text-shadow: none;
+    }
+    100% {
+        transform: rotate(-2.5deg);
+    }
+}
+
+#fav-btn {
+    position: relative;
+    background-color: inherit;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: 2;
+}
+
+.lable1 {}
+
+.fa-star {
+    margin-left: 1%;
+    box-sizing: border-box;
+    position: absolute;
+    -webkit-text-stroke: 2px rgba(110, 110, 110, 0.795);
+    color: rgba(110, 110, 110, 0.116);
+    transition: all ease-in-out;
+}
+
+#fav-btn:checked+.fa-star {
+    color: rgb(255, 255, 0);
+    -webkit-text-stroke: 1px rgb(255, 255, 0);
+    animation: .5s linear favorite;
+}
+
+@keyframes favorite {
+    0%,
+    10% {
+        transform: scale(1.2);
+        opacity: .5;
+        color: rgb(230, 235, 188);
+    }
+    45% {
+        transform: scale(.1) rotate(30deg);
+        opacity: .75;
+    }
+    50% {
+        transform: scale(1.5) rotate(-50deg);
+        opacity: 1;
+        color: rgb(217, 255, 0);
+        text-shadow: 2px 2px 6px rgb(217, 255, 0);
+    }
+    90%,
+    95% {
+        transform: scale(1) rotate(10deg);
+        text-shadow: none;
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}

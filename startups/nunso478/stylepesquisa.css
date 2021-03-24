@@ -1,0 +1,132 @@
+.cor-principal{
+    color:crimson;
+}
+h1{
+    font-weight: 900;
+    height: 36px;
+    margin: 0;
+    line-height: 0.8;
+}
+
+
+.carousel-caption{
+    color: black;
+    top:0;
+    padding: 60px 130px;
+    height: 210px;
+    
+}
+.container{
+    background-color: black;
+   padding: 10px;
+   box-shadow: 5px 5px 5px aqua;
+}
+.nav-item{
+    margin-right: 10px;
+    height: 50px;  
+    
+     
+     
+}
+.nav-item:hover{
+    background-color: crimson;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;  
+    box-shadow: 2px 2px 5px white;
+}
+body{
+    background-image: url("/imagem/fundo.jpg");
+    height: 100%;
+    margin: 0;
+}
+.norte{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+}
+.navbar-toggler{
+    background-color: white;
+
+}
+#txtBusca{
+    background-color: lightblue;
+    padding-left:5px;
+    font-style:italic;
+    font-size:20px;
+    border:none;
+    height:32px;
+    width:260px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.botaopesquisa{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+footer  .col-lg-12{
+    background-color: rgb(121, 8, 8);
+    padding: 80px;
+      
+ }
+ .social-media{
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;  
+     
+ }
+ footer{
+    color:white;
+     
+ }
+ .social-media a:hover{
+    color:  white;
+ }
+ .ligacao{
+     font-size: 25px;
+     color: white;
+ }
+ .ligacao a:hover{
+     color: aqua;
+ } 
+ .fundo {
+       border: 5px outset transparent;
+       background-color: white; 
+       width: 20%;
+       font:  arial;
+}
+
+.Fairy{
+  
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+}
+.Fairy2{
+    
+    margin-left: 50px;
+    margin-bottom: 50px;
+   
+}
+.Fairy3{
+    
+    margin-left: 50px;
+    margin-bottom: 50px;
+  
+}
+@media only screen and (max-width: 800px){
+    .container {
+         
+        display: block;
+       
+    }
+     
+
+    
+}

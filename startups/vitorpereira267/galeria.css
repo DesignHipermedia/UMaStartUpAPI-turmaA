@@ -1,0 +1,140 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.corpo {
+    width: 2060px;
+    margin: auto;
+  }
+  
+  .conteudo {
+    display: table;
+    padding: 30px;
+  }
+  
+  .imagem{
+    border-top-right-radius: 20px;
+  }
+  .imagem1 {
+    display: table-cell;
+    float: left;
+    border-top-right-radius: 20px;
+  }
+  .imagem2 {
+    display: table-cell;
+    float: right;
+  }
+  .imagem3 {
+    display: table-cell;
+    float: left;
+  }
+  .imagem4 {
+    display: table-cell;
+    float: right;
+  }
+  .texto1 {
+    display: table-cell;
+    float: left;
+    width: 300px;
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .texto2 {
+    display: table-cell;
+    float: left;
+    width: 300px;
+    margin-left: 900px;
+    padding-top: 100px;
+  }
+
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+  }
+  
+  .logo{
+    cursor: pointer;
+    margin-right: auto;
+  }
+  
+  .nav_links{
+    list-style: none;
+  }
+  
+  .nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .nav_links li a{
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav_links li a:hover{
+    color: #0088a9;
+  }
+  
+  button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+/* Footer */
+
+  .attribution {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-size: 11px;
+  }
+  
+  
+  
+  .footer-logo {
+    padding: 5% 3% 0;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+  }
+  
+  .footer-main {  display: flex; justify-content: space-around; }
+  .footer-nav {  display: grid; }
+  .footer-nav__menu {  padding-bottom: 8%; }
+  
+  .site-footer {
+    background-color: #393a3b;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .social-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5%;
+  }
+  
+  .social-menu__link {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    display: inline-block;
+  }

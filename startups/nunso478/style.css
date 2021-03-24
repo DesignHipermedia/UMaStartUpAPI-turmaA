@@ -1,0 +1,175 @@
+footer  .col-lg-12{
+   background-color: rgb(121, 8, 8);
+   padding: 80px;
+     
+}
+.social-media{
+   padding: 0 20px;
+   color: white;
+   text-decoration: none;
+   font-size: 30px;    
+}
+footer{
+   color:white;
+    
+}
+.social-media a:hover{
+   color:  white;
+}
+.ligacao{
+    font-size: 25px;
+    color: white;
+}
+.ligacao a:hover{
+    color: aqua;
+} 
+.fundo {
+      border: 5px outset transparent;
+      background-color: white; 
+      width: 20%;
+      font:  arial;
+    }
+p{
+      color: gray;
+  }
+
+.cor-principal{
+    color:crimson;
+}
+h1{
+    font-weight: 900;
+    height: 36px;
+    margin: 0;
+    line-height: 0.8;
+}
+.home-food img{
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    
+}
+.carousel-caption{
+    color: black;
+    top:0;
+    padding: 60px 130px;
+    height: 210px;
+    
+}
+.container{
+    background-color: black;
+    padding: 10px;
+     
+   
+}
+.navbar-toggler{
+    background-color: white;
+
+}
+.tema{
+    
+    height: 506px;
+    width: 1000px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
+.nav-item{
+    
+    margin-right: 10px;
+    height: 50px;  
+     
+     
+}
+.nav-item:hover{
+    background-color: crimson;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;  
+    box-shadow: 2px 2px 5px white;
+}
+.top{
+    border-bottom-style: solid;
+    border-bottom-color: black;
+   
+}
+.container1{
+    
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: 50% 2fr 1fr 1fr;
+
+    grid-gap: 20px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    
+    width: 1110px;
+    margin: 0px auto;
+    box-shadow: 5px 5px 25px aqua;
+    background-color: whitesmoke;
+}
+ 
+.destaque{
+    grid-row-start: 3;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 50px;
+    margin-top: 90px;
+}
+.aka{
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 50px;
+    margin-bottom: 50px;
+   
+  
+}
+.JUJUTSU{
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 50px;
+    margin-bottom: 50px;
+   
+     
+}
+.Fairy{
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 50px;
+    margin-bottom: 50px;
+   
+}
+.Rising{
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+}
+body{
+    background-image: url("/imagem/bd.jpg");
+}
+@media only screen and (max-width: 800px){
+    .container1,.tema{
+         width: 100%;
+        display: block;
+        overflow: hidden;
+       
+    }
+     
+
+    
+}

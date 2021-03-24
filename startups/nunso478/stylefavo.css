@@ -1,0 +1,143 @@
+.cor-principal{
+    color:crimson;
+}
+h1{
+    font-weight: 900;
+    height: 36px;
+    margin: 0;
+    line-height: 0.8;
+}
+.carousel-caption{
+    color: black;
+    top:0;
+    padding: 60px 130px;
+    height: 210px;
+    
+}
+.container{
+    background-color: black;
+   padding: 10px;
+   box-shadow: 5px 5px 5px aqua;
+}
+.nav-item{
+   
+    margin-right: 10px;
+   
+    height: 50px;  
+  
+     
+}
+.navbar-toggler{
+    background-color: white;
+
+}
+.nav-item:hover{
+    background-color: crimson;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;  
+    box-shadow: 2px 2px 5px white;
+}
+body{
+    background-image: url("/imagem/fundo.jpg");
+    margin: 0;
+}
+.Fairy{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border: 9px solid transparent;
+    border-style: solid;
+    border-top-color:blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 5px 5px 15px blue;
+   
+}
+.lovewar{
+    
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border: 9px solid transparent;
+    border-style: solid;
+    border-top-color:red;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 5px 5px 15px  red;
+    
+}
+.ataque{
+    
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border: 9px solid transparent;
+    border-style: solid;
+    border-top-color:yellow;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 5px 5px 15px  yellow;
+     
+}
+.NarutoShippuden{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border: 9px solid transparent;
+    border-style: solid;
+    border-top-color:orange;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 5px 5px 15px orange;
+    
+}
+.fa{
+    font-size: 50px;
+}
+footer  .col-lg-12{
+    background-color: rgb(121, 8, 8);
+    padding: 80px;
+      
+ }
+ .social-media{
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;  
+     
+ }
+ footer{
+    color:white;
+     
+ }
+ .social-media a:hover{
+    color:  white;
+ }
+ .ligacao{
+     font-size: 25px;
+     color: white;
+ }
+ .ligacao a:hover{
+     color: aqua;
+ } 
+ .fundo {
+       border: 5px outset transparent;
+       background-color: white; 
+       width: 20%;
+       font:  arial;
+}
+@media only screen and (max-width: 800px){
+    .container,.Fairy,.NarutoShippuden,.ataque,.lovewar{
+        display: block;
+       
+    }
+     
+
+    
+}

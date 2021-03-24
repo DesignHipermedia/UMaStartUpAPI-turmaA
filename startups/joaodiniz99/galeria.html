@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./resources/img/logo.png" type="image/x-icon">
+    <title>Big dog</title>
+    <script src="notiflix-aio-2.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="btnTopNav" style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./resources/img/logo.png" alt="" width="70" height="70">
+          BIG Dog
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./racas.html">Raças</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./contactos.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center mt-4">
+          <h1><span id="tituloCao">Galeria</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center my-3">
+          <input type="text" id="nomeCao" />
+          <button type="button" class="btn btn-sm btn-info" id="btnCao">
+            <span>&#128270;</span>
+          </button>
+        </div>
+      </div>
+      <div class="row" id="content">
+    </div>
+    <a href="#btnTopNav" id="btnTop" title="Go to top">
+      <i class="fas fa-arrow-up fa-2x"></i>
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script>
+      const alvo = document.getElementById("content"); // div para mostrar os cães
+      const entrada = document.getElementById("nomeCao"); // input
+      const btnCao = document.getElementById("btnCao"); // botao
+      const tituloCao = document.getElementById("tituloCao"); // titulo
+
+      Notiflix.Loading.Init({ 
+        backgroundColor:"rgb(68, 116, 138)",
+        svgColor:"#17a2b8",
+        fontFamily:"Roboto",
+        useGoogleFont:true, 
+      }); 
+      
+      const mostrarCaes = async (nome) => {
+        const nomeTransformado = nome.split(" ").join("").toLowerCase(); // nome sem espaços e em letra minúscula, exemplo: "German Sheperd" para "germanshepherd" para a pesquisa ser feita corretamente na api
+        let url = `https://dog.ceo/api/breed/${nomeTransformado}/images`;
+        alvo.innerHTML = ""; // limpar o conteudo
+        tituloCao.innerHTML = nome; // introduzir o nome dentro do título
+        Notiflix.Loading.Pulse("A carregar...");
+        try {
+          const response = await fetch(url);
+          if (response.ok) {
+            Notiflix.Loading.Remove();
+            const { message } = await response.json();
+            // console.log(message)
+            const imagens = message;
+            let count = 0;
+            imagens.forEach((imagem) => {
+              // console.log(imagem)
+              count++;
+              const div = document.createElement("div");
+              div.className = "col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center imagesDiv";
+              const img = document.createElement("img");
+              img.src = imagem;
+              img.className = "img-fluid";
+              img.alt = `${nomeTransformado}${count}`;
+
+              div.appendChild(img);
+              alvo.appendChild(div);
+            });
+          } else {
+            throw new Error(
+              "Esta raça não existe ou foi inserida de forma incorreta"
+            );
+          }
+        } catch (error) {
+          alert(error);
+          Notiflix.Loading.Remove();
+        }
+      };
+
+      btnCao.addEventListener("click", () => {
+        nome = entrada.value;
+        if (nome != "") {
+          mostrarCaes(nome);
+        } else {
+          alert("O nome não pode estar vazio");
+        }
+      });
+
+
+      /* BACK TO TOP */
+      const botao = document.getElementById("btnTop");
+
+      window.onscroll = () => {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+          botao.style.display = "block";
+        } else {
+          botao.style.display = "none";
+        }
+      }
+
+    </script>
+  </body>
+</html>
