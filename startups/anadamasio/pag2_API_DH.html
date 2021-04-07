@@ -141,7 +141,8 @@
       },
       methods: {
         getPlants() {
-          const url = "http://192.168.1.12:1997/plantas";
+          const url = "http://localhost:1997/plantas";
+          // axios é uma biblioteca que faz pedidos ao servidor
           axios.get(url).then(res => {
             // console.log(res.data.data);
             for (let i = 0; i < res.data.data.length; i++) {
