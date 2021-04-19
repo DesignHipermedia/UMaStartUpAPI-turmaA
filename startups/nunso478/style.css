@@ -160,7 +160,7 @@ h1{
     
 }
 body{
-    background-image: url("/imagem/bd.jpg");
+    background-image: url("./imagem/bd.jpg");
 }
 @media only screen and (max-width: 800px){
     .container1,.tema{

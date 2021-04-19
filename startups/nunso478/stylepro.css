@@ -37,7 +37,7 @@ h1{
     box-shadow: 2px 2px 5px white;
 }
 body{
-    background-image: url("/imagem/bd.jpg");
+    background-image: url("./imagem/bd.jpg");
     margin: 0;
 }
 .navbar-toggler{

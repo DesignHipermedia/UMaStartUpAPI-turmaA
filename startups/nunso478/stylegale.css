@@ -30,7 +30,7 @@ h1{
    box-shadow: 5px 5px 5px aqua;
 }
 body{
-    background-image: url("/imagem/bd.jpg");
+    background-image: url("./imagem/bd.jpg");
     margin: 0;
 }
 footer  .col-lg-12{
