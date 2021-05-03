@@ -103,7 +103,7 @@
     padding-left: 15px;
   }
 
-  .online-form input[type="email"] {
+  .online-form input[type="text"] {
     width: 60%;
   }
 
